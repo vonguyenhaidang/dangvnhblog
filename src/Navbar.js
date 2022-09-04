@@ -3,89 +3,30 @@ import { Link, Outlet } from 'react-router-dom';
 function NavigationBar() {
     return (
         <>
-            <div class="sidebar">
-                <div class="logo-details">
-                    <i class='bx bxl-c-plus-plus icon'></i>
-                    <div class="logo_name">CodingLab</div>
-                    <i class='bx bx-menu' id="btn" ></i>
+            <nav class=" transpa-nav navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Disabled</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search"/>
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
                 </div>
-                <ul class="nav-list">
-                    <li>
-                        <i class='bx bx-search' ></i>
-                        <input type="text" placeholder="Search..." />
-                        <span class="tooltip">Search</span>
-                    </li>
-                    <li>
-                        <a href="#" onClick={()=>{ alert('Chào bạn'); }}>
-                            <i class='bx bx-home-heart'></i>
-                            <span class="links_name">Trang chủ</span>
-                        </a>
-                        <span class="tooltip">Trang chủ</span>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class='bx bx-user'></i>
-                            <span class="links_name">User</span>
-                        </a>
-                        <span class="tooltip">User</span>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class='bx bx-chat' ></i>
-                            <span class="links_name">Messages</span>
-                        </a>
-                        <span class="tooltip">Messages</span>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class='bx bx-pie-chart-alt-2' ></i>
-                            <span class="links_name">Analytics</span>
-                        </a>
-                        <span class="tooltip">Analytics</span>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class='bx bx-folder' ></i>
-                            <span class="links_name">File Manager</span>
-                        </a>
-                        <span class="tooltip">Files</span>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class='bx bx-cart-alt' ></i>
-                            <span class="links_name">Order</span>
-                        </a>
-                        <span class="tooltip">Order</span>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class='bx bx-heart' ></i>
-                            <span class="links_name">Saved</span>
-                        </a>
-                        <span class="tooltip">Saved</span>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class='bx bx-cog' ></i>
-                            <span class="links_name">Setting</span>
-                        </a>
-                        <span class="tooltip">Setting</span>
-                    </li>
-                    <li class="profile">
-                        <div class="profile-details">
-                            <img src="" alt="Image" />
-                            <div class="name_job">
-                                <div class="name">Prem Shahi</div>
-                                <div class="job">Web designer</div>
-                            </div>
-                        </div>
-                        <i class='bx bx-log-out' id="log_out" ></i>
-                    </li>
-                </ul>
-            </div>
-            <section class="home-section">
-                <div class="text">Dashboard</div>
-            </section>
+            </nav>
             <Outlet />
         </>
     );
